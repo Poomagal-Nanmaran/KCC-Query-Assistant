@@ -11,15 +11,7 @@ WORKDIR /app
 # Copy files
 COPY requirements.txt .
 RUN pip install --upgrade pip
-#RUN pip install -r requirements.txt
-RUN pip install pandas
-RUN pip install numpy
-#RUN pip install sentence-transformers
-RUN pip install chromadb
-RUN pip install streamlit
-RUN pip install requests
-RUN pip install ollama
-RUN pip install sentence-transformers
+RUN pip install -r requirements.txt
 
 
 
