@@ -1,0 +1,30 @@
+
+services:
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    volumes:
+      - ./ollama:/root/.ollama  # Persist models
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+    tty: true
+
+  kcc-assistant:
+    image: kcc-query-assistant:latest  # Ensure you build this image first
+    container_name: kcc-query-assistant
+    depends_on:
+      - ollama
+    volumes:
+      - ./data:/app/data
+      - ./vectorstore:/app/vectorstore
+      - ./scripts:/app/scripts
+      - ./ui:/app/ui
+      #- .:/app
+    ports:
+      - "8501:8501"  # If using Streamlit UI
+    environment:
+      - PYTHONPATH=/app
+    command: ["streamlit", "run", "/app/scripts/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+

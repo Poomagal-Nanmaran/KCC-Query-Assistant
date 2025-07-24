@@ -1,0 +1,7 @@
+pandas
+numpy
+sentence-transformers
+chromadb
+streamlit
+requests
+ollama  # Optional: if you plan to run via API from another container
