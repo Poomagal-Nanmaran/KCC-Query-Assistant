@@ -1,3 +1,4 @@
 vectorstore/
 data/preprocessed/kcc_cleaned_qa.json
 data/raw/kcc_dataset.csv
+ollama/
