@@ -26,6 +26,7 @@ Fallback — Warns when no relevant local context is found
 Web UI — Streamlit interface for easy querying
 
 📂 Project Structure
+
 KCCQueryAssistant/
 ├── data/                   # Raw & preprocessed dataset
 │   ├── raw/
