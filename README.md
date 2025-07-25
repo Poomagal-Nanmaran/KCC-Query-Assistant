@@ -1,5 +1,5 @@
 
-🌾 ## KCC Query Assistant
+🌾 **KCC Query Assistant**
 
 An offline‑capable, local‑first AI assistant for answering agricultural queries using the Kisan Call Center (KCC) dataset with RAG (Retrieval‑Augmented Generation) and a local LLM (via Ollama).
 
@@ -15,7 +15,7 @@ Retrieves relevant context for a query
 
 Generates answers with Ollama (e.g., Gemma, Mistral)
 
-✨ Features
+✨ **Features**
 Offline‑capable — Runs fully on your machine
 
 Multilingual — Supports Indian languages for queries and data
@@ -26,7 +26,7 @@ Fallback — Warns when no relevant local context is found
 
 Web UI — Streamlit interface for easy querying
 
-📂 Project Structure
+📂 **Project Structure**
 ```bash
 KCCQueryAssistant/
 ├── data/                   # Raw & preprocessed dataset
@@ -46,20 +46,21 @@ KCCQueryAssistant/
 └── README.md
 ```
 
-🛠️ Prerequisites
+🛠️ **Prerequisites**
 Docker & Docker Compose
 
 At least 8GB RAM for embeddings + small LLMs
 
 (Optional) Python 3.10+ for running without Docker
 
-🚀 Quick Start (with Docker)
-1. Create a repository
+🚀 **Quick Start (with Docker)**
+
+***1. Create a repository***
 mkdir KCCQueryAssistant
-2. Place the KCC dataset
+***2. Place the KCC dataset***
 Put the raw KCC CSV inside:
 data/raw/
-3. Build docker image
+***3. Build docker image***
 bash build_docker.sh
 
 docker compose up
@@ -68,21 +69,21 @@ This will start:
 Ollama on http://localhost:11434
 
 Streamlit UI on http://localhost:8501
-4. Pull an LLM model
+***4. Pull an LLM model***
 Once Ollama is running:
 
 docker exec -it ollama ollama pull gemma
 (You can also use mistral or llama3)
 
-5. Preprocess & embed data
+***5. Preprocess & embed data***
 Run these inside the container:
 
 docker exec -it kcc-query-assistant python scripts/preprocess.py
 docker exec -it kcc-query-assistant python scripts/embed_and_store.py
-6. Access the Web UI
+***6. Access the Web UI***
 Go to: http://localhost:8501
 
-Ask queries like:
+**Ask queries like:**
 
 "What pest-control methods are recommended for paddy in Tamil Nadu?"
 
@@ -90,11 +91,11 @@ Ask queries like:
 
 "Common sugarcane diseases in Maharashtra?"
 
-⚙️ Environment Variables
+⚙️ ***Environment Variables***
 Variable	Default	Description
 PYTHONPATH	/app	Project root for imports
 
-🖥️ Running Without Docker
+🖥️ **Running Without Docker**
 If you don’t want Docker:
 
 python -m venv venv
