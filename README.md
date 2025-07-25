@@ -26,7 +26,7 @@ Fallback — Warns when no relevant local context is found
 Web UI — Streamlit interface for easy querying
 
 📂 Project Structure
-
+'''bash
 KCCQueryAssistant/
 ├── data/                   # Raw & preprocessed dataset
 │   ├── raw/
@@ -43,6 +43,7 @@ KCCQueryAssistant/
 ├── docker-compose.yml      # Ollama + App services
 ├── requirements.txt
 └── README.md
+'''
 
 🛠️ Prerequisites
 Docker & Docker Compose
