@@ -56,13 +56,16 @@ At least 8GB RAM for embeddings + small LLMs
 🚀 **Quick Start (with Docker)**
 
 ***1. Create a repository***
+
 mkdir KCCQueryAssistant
 
 ***2. Place the KCC dataset***
+
 Put the raw KCC CSV inside:
 data/raw/
 
 ***3. Build docker image***
+
 bash build_docker.sh
 
 docker compose up
@@ -73,18 +76,22 @@ Ollama on http://localhost:11434
 Streamlit UI on http://localhost:8501
 
 ***4. Pull an LLM model***
+
 Once Ollama is running:
 
 docker exec -it ollama ollama pull gemma
 (You can also use mistral or llama3)
 
 ***5. Preprocess & embed data***
+
 Run these inside the container:
 
 docker exec -it kcc-query-assistant python scripts/preprocess.py
+
 docker exec -it kcc-query-assistant python scripts/embed_and_store.py
 
 ***6. Access the Web UI***
+
 Go to: http://localhost:8501
 
 **Ask queries like:**
