@@ -83,6 +83,7 @@ Run these inside the container:
 
 docker exec -it kcc-query-assistant python scripts/preprocess.py
 docker exec -it kcc-query-assistant python scripts/embed_and_store.py
+
 ***6. Access the Web UI***
 Go to: http://localhost:8501
 
