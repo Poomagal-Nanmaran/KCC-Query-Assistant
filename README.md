@@ -57,9 +57,11 @@ At least 8GB RAM for embeddings + small LLMs
 
 ***1. Create a repository***
 mkdir KCCQueryAssistant
+
 ***2. Place the KCC dataset***
 Put the raw KCC CSV inside:
 data/raw/
+
 ***3. Build docker image***
 bash build_docker.sh
 
