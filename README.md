@@ -69,6 +69,7 @@ This will start:
 Ollama on http://localhost:11434
 
 Streamlit UI on http://localhost:8501
+
 ***4. Pull an LLM model***
 Once Ollama is running:
 
