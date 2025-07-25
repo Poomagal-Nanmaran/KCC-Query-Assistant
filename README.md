@@ -1,5 +1,6 @@
 
-🌾 KCC Query Assistant
+🌾 ##KCC Query Assistant
+
 An offline‑capable, local‑first AI assistant for answering agricultural queries using the Kisan Call Center (KCC) dataset with RAG (Retrieval‑Augmented Generation) and a local LLM (via Ollama).
 
 It works completely offline after setup:
